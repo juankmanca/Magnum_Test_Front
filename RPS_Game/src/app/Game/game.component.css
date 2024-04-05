@@ -1,0 +1,89 @@
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  .align-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.player-form {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 230px;
+  margin: 30px;
+}
+
+.player-header-1 {
+  background: #f84956;
+}
+
+.player-header-2 {
+  background: #3498db;
+}
+
+.player-header-p {
+  margin: 5px;
+  color: black;
+  font-weight: bold;
+}
+
+.circle {
+  width: 15px; /* ajusta el tamaño del círculo según tus necesidades */
+  height: 15px; /* ajusta el tamaño del círculo según tus necesidades */
+  background-color: #ff0000; /* color del círculo */
+  border-radius: 50%; /* asegura que el elemento tenga forma de círculo */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6); /* sombra del círculo */
+}
+
+.scoreboard{
+  display: flex;
+  padding: 10px;
+}
+
+.scoreboard p{
+  font-weight: bold;
+  text-align: center;
+}
+.circle-score {
+  margin-right: 3px;
+  margin-left: 3px;
+  width: 25px; /* ajusta el tamaño del círculo según tus necesidades */
+  height: 25px; /* ajusta el tamaño del círculo según tus necesidades */
+  background-color: #ffff; /* color del círculo */
+  border-radius: 50%; /* asegura que el elemento tenga forma de círculo */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6); /* sombra del círculo */
+}
+
+.turn {
+  color: rgb(198, 3, 3);
+  font-weight: bold;
+}
+
+.images img {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out; /* Agrega una transición suave */
+  width: 168px; height: 179px; overflow: hidden;
+}
+
+.images img:hover {
+  transform: translateY(-5px); /* Mueve la imagen hacia arriba al pasar el cursor */
+}
+
+.game {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}

@@ -1,0 +1,41 @@
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  .align-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.player-form{
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 230px;
+  margin: 30px
+}
+
+.player-header-1{
+  background: #f84956;
+}
+
+.player-header-2{
+  background: #3498db;
+}
+
+.player-header-p{
+  margin: 5px;
+  color: black;
+  font-weight: bold;
+}
