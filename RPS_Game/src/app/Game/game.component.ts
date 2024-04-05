@@ -127,7 +127,6 @@ export class GameComponent implements OnInit {
   }
 
   public async newMovement(player: number, movement: Movement): Promise<void> {
-    if(this.gameIsFinished) return;
     this.showPlayerSelection(player, movement);    
     const body = this.getBodyMovement(player, movement);
     const promise = await this.generalService.sendRequest(environment.newMovement, http.post, body)
@@ -137,7 +136,7 @@ export class GameComponent implements OnInit {
         if (response.isSuccess) {
           const apiResponse: NewMovementResponse = response.value
           if(apiResponse.finishGame){
-            this.score[2] = apiResponse.result
+            this.score[2] = apiResponse.round.result
             this.SelectWinner();
           } else {
             const round: IRound = apiResponse.round

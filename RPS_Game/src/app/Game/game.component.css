@@ -9,11 +9,67 @@
   align-items: center;
 }
 
-@media screen and (max-width: 500px) {
+.game {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.images img {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out; /* Agrega una transición suave */
+  width: 168px; height: 179px; overflow: hidden;
+}
+
+.scoreboard{
+  padding: 10px;
+}
+
+.circle-score {
+  margin-right: 3px;
+  margin-left: 3px;
+  width: 25px;
+  height: 25px; 
+  background-color: #ffff; 
+  border-radius: 50%; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+.game-card-header{
+  font-weight: bold;
+  margin: 0.5rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
   .align-center {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .scoreboard {
+    margin: 10px;
+  }
+
+  .images img {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    width: 108px; height: 119px; overflow: hidden;
+  }
+
+  .circle-score {
+    margin-right: 3px;
+    margin-left: 3px;
+    width: 15px;
+    height: 15px; 
+    background-color: #ffff; 
+    border-radius: 50%; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  }
+
+  .game-card-header{
+    width: 108px;
   }
 }
 
@@ -48,42 +104,21 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.6); /* sombra del círculo */
 }
 
-.scoreboard{
-  display: flex;
-  padding: 10px;
-}
+
 
 .scoreboard p{
   font-weight: bold;
   text-align: center;
 }
-.circle-score {
-  margin-right: 3px;
-  margin-left: 3px;
-  width: 25px; /* ajusta el tamaño del círculo según tus necesidades */
-  height: 25px; /* ajusta el tamaño del círculo según tus necesidades */
-  background-color: #ffff; /* color del círculo */
-  border-radius: 50%; /* asegura que el elemento tenga forma de círculo */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6); /* sombra del círculo */
-}
+
 
 .turn {
   color: rgb(198, 3, 3);
   font-weight: bold;
 }
 
-.images img {
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out; /* Agrega una transición suave */
-  width: 168px; height: 179px; overflow: hidden;
-}
-
 .images img:hover {
   transform: translateY(-5px); /* Mueve la imagen hacia arriba al pasar el cursor */
 }
 
-.game {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
+

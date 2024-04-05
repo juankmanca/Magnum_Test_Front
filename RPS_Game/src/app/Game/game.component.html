@@ -7,7 +7,7 @@
     <div class="btn btn-success me-2" (click)="playNewGame()"> Play New Game</div>
     @if(this.gameIsFinished)
     {
-      <div class="btn btn-primary" (click)="playAgain()"> Play Again</div>
+    <div class="btn btn-primary" (click)="playAgain()"> Play Again</div>
     }
   </div>
 
@@ -51,21 +51,23 @@
 
   <div class="game">
     <div class="card d-flex align-center">
-      @if(player1Selection == ''){
-        <p class="fw-bold">Choose your Better Option</p>
-      } @else {
-        <p class="fw-bold">Selected: {{player1Selection}}</p>
-      }
-      <div class="images d-flex">
+      <div class="game-card-header">
+        @if(player1Selection == ''){
+        <p> {{this.currentGame?.player1Name}}</p>
+        } @else {
+        <p>{{this.currentGame?.player1Name}}: {{player1Selection}}</p>
+        }
+      </div>
+
+      <div class="images d-flex flex-md-row flex-column">
         <img (click)="newMovement(1, 1)" src="assets/Images/RPS/rock.jpg" title="Rock">
         <img (click)="newMovement(1, 2)" src="assets/Images/RPS/hand.jpg" title="Paper">
-        <img (click)="newMovement(1, 3)" src="assets/Images/RPS/scissors.jpg"
-          title="Scissors">
+        <img (click)="newMovement(1, 3)" src="assets/Images/RPS/scissors.jpg" title="Scissors">
       </div>
     </div>
 
-    <div class="card mx-5 scoreboard">
-      <p>SCORE</p>
+    <div class="card mx-2 mx-md-5 scoreboard">
+      <p class="text-nowrap">SCORE</p>
       <div class="score">
         <div class="d-flex align-items-center">
           @for (point of score; track $index) {
@@ -78,25 +80,26 @@
     </div>
 
     <div class="card d-flex align-center">
-      @if(player2Selection == ''){
-        <p class="fw-bold">Choose your Better Option</p>
-      } @else {
-        <p class="fw-bold">Selected: {{player2Selection}}</p>
-      }
-      <div class="images d-flex">
+      <div class="game-card-header">
+        @if(player1Selection == ''){
+        <p> {{this.currentGame?.player2Name}}</p>
+        } @else {
+        <p>{{this.currentGame?.player2Name}}: {{player2Selection}}</p>
+        }
+      </div>
+      <div class="images d-flex flex-md-row flex-column">
         <img (click)="newMovement(2, 1)" src="assets/Images/RPS/rock.jpg" title="Rock">
         <img (click)="newMovement(2, 2)" src="assets/Images/RPS/hand.jpg" title="Paper">
-        <img (click)="newMovement(2, 3)" src="assets/Images/RPS/scissors.jpg"
-          title="Scissors">
+        <img (click)="newMovement(2, 3)" src="assets/Images/RPS/scissors.jpg" title="Scissors">
       </div>
     </div>
   </div>
 
   @if(this.showWinnerMessage){
-    <div class="result mt-5">
-      <h2> {{this.WinnerMessage}} </h2>
-    </div>
+  <div class="result mt-5">
+    <h2> {{this.WinnerMessage}} </h2>
+  </div>
   }
-  
+
 
 </div>
